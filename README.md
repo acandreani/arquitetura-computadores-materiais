@@ -11,6 +11,10 @@ Encontro 5, Lista 1 — soluções em Python/PyRTL:
 - [Exercício 2: banco de registradores com duas leituras](encontro-05/lista-01/solucao_encontro5_lista1_exercicio2.py)
 - [Exercício 3: porta de escrita e habilitação](encontro-05/lista-01/solucao_encontro5_lista1_exercicio3.py)
 
+Encontro 6 — unidade de controle em PyRTL:
+
+- [Exemplo resolvido 1: ADD com controle autônomo](encontro-06/exemplo_resolvido1_encontro6.py): máquina de estados, sinais de controle e trace ciclo a ciclo.
+
 ## Como executar
 
 Com Python 3.9 ou superior instalado, abra um terminal na pasta do repositório:
@@ -27,6 +31,7 @@ python -m pip install pyrtl
 python encontro-05/lista-01/solucao_encontro5_lista1_exercicio1.py
 python encontro-05/lista-01/solucao_encontro5_lista1_exercicio2.py
 python encontro-05/lista-01/solucao_encontro5_lista1_exercicio3.py
+python encontro-06/exemplo_resolvido1_encontro6.py
 ```
 
 Cada solução inclui verificações automáticas e saída para acompanhamento.

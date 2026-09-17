@@ -6,6 +6,8 @@
 - Não sincronize automaticamente pastas locais nem conteúdo do Google Drive.
 - Também foi autorizada a publicação do exemplo resolvido 1 do Encontro 6
   em `encontro-06/exemplo_resolvido1_encontro6.py`.
+- Também foi autorizado `encontro-06/encontro6_controle_pyrtl.py`, com os
+  controladores cabeado e microprogramado.
 - Atualização local de um material não autoriza sua publicação no GitHub.
 - Não inclua guias docentes, outros gabaritos ou materiais de outros encontros
   sem uma solicitação explícita que os coloque no escopo.

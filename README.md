@@ -14,6 +14,7 @@ Encontro 5, Lista 1 — soluções em Python/PyRTL:
 Encontro 6 — unidade de controle em PyRTL:
 
 - [Exemplo resolvido 1: ADD com controle autônomo](encontro-06/exemplo_resolvido1_encontro6.py): máquina de estados, sinais de controle e trace ciclo a ciclo.
+- [Controle cabeado e microprogramado](encontro-06/encontro6_controle_pyrtl.py): dois controladores para o mesmo caminho de dados, com simulação por ciclos.
 
 ## Como executar
 
@@ -32,6 +33,7 @@ python encontro-05/lista-01/solucao_encontro5_lista1_exercicio1.py
 python encontro-05/lista-01/solucao_encontro5_lista1_exercicio2.py
 python encontro-05/lista-01/solucao_encontro5_lista1_exercicio3.py
 python encontro-06/exemplo_resolvido1_encontro6.py
+python encontro-06/encontro6_controle_pyrtl.py
 ```
 
 Cada solução inclui verificações automáticas e saída para acompanhamento.

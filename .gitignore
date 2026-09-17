@@ -1,0 +1,13 @@
+# Lista explícita dos arquivos autorizados para publicação.
+# Novos materiais exigem autorização antes de ampliar esta lista.
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/encontro-05/
+/encontro-05/*
+!/encontro-05/lista-01/
+/encontro-05/lista-01/*
+!/encontro-05/lista-01/solucao_encontro5_lista1_exercicio1.py
+!/encontro-05/lista-01/solucao_encontro5_lista1_exercicio2.py
+!/encontro-05/lista-01/solucao_encontro5_lista1_exercicio3.py

@@ -8,6 +8,8 @@
   em `encontro-06/exemplo_resolvido1_encontro6.py`.
 - Também foi autorizado `encontro-06/encontro6_controle_pyrtl.py`, com os
   controladores cabeado e microprogramado.
+- Também foi autorizado `encontro-06/test_encontro6_controle_pyrtl.py`,
+  com os testes dos controladores.
 - Atualização local de um material não autoriza sua publicação no GitHub.
 - Não inclua guias docentes, outros gabaritos ou materiais de outros encontros
   sem uma solicitação explícita que os coloque no escopo.

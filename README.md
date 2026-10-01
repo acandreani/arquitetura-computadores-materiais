@@ -87,6 +87,30 @@ não essa transição. INVALIDO representa o código de estado 7.
 
 [Diagrama vetorial SVG](encontro-06/maquina_microprogramada_encontro6.svg).
 
+## Encontro 6, parte 2: exemplo resolvido 2
+
+[Código de JZ e equivalência dos controles](encontro-06/exemplo2_parte2_encontro6.py).
+Compara os sinais e estados dos controles cabeado e microprogramado, mostrando
+JZ tomado (R1=0, PC recebe 0x40) e não tomado (R1 diferente de zero, PC preservado).
+A microinstrução 644 solicita a escrita, mas o enable final depende de Z e reset.
+Nos dois casos, o sequenciamento é IDLE → DECODE → JZ → DONE → IDLE.
+
+Mantenha `encontro6_controle_pyrtl.py` e `exemplo1_parte2_encontro6.py` na mesma
+pasta: o exemplo reutiliza esses circuitos. Com as dependências Python e o
+Graphviz do sistema instalados conforme a seção anterior, execute:
+
+```bash
+python encontro-06/exemplo2_parte2_encontro6.py
+```
+
+O programa imprime os traces, verifica 512 casos de JZ, oito casos de
+equivalência e dois casos de reset, e gera os diagramas PNG/SVG com transitions.
+Os estados do desenho incluem a microinstrução e as ações do caminho de dados.
+
+![JZ: microinstruções e ações por estado](encontro-06/maquina_jz_exemplo2_encontro6.png)
+
+[Diagrama vetorial SVG](encontro-06/maquina_jz_exemplo2_encontro6.svg).
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

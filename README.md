@@ -45,6 +45,48 @@ Para executar a suíte de testes do encontro 6, na raiz do repositório:
 python -m pytest -q encontro-06/test_encontro6_controle_pyrtl.py
 ```
 
+## Encontro 6, parte 2: exemplo resolvido 1
+
+[Código completo em PyRTL e transitions](encontro-06/exemplo1_parte2_encontro6.py).
+O programa constrói a ROM de controle de 8 palavras de 10 bits, extrai seus
+campos e executa ADD e SUB. A codificação usa alvo nos bits 9:7 e os sinais
+de escrita/subtração nos bits 0 e 1:
+
+- ADD: `(5 << 7) | 1 = 641 = 0x281`.
+- SUB: `(5 << 7) | 3 = 643 = 0x283`.
+
+Com R2=5 e R3=7, ADD armazena 12 e SUB armazena 254 (padrão de -2 em
+complemento de dois de oito bits). R1 muda na observação de DONE, após a borda
+que encerra o estado de execução. A saída combinacional da ULA pode mudar
+depois disso sem alterar R1, pois a escrita está desabilitada.
+
+Para executar, instale também o **Graphviz do sistema**, que fornece o comando
+`dot` (por exemplo, `sudo apt install graphviz` no Ubuntu ou
+`brew install graphviz` no macOS; no Windows, instale Graphviz e inclua seu
+diretório `bin` no PATH). O pacote Python `graphviz` não instala esse executável.
+
+```bash
+python -m pip install pyrtl transitions graphviz
+python encontro-06/exemplo1_parte2_encontro6.py
+```
+
+O script imprime a ROM e os traces, verifica 72 cenários e 128 combinações de
+sequenciamento, e gera PNG/SVG na própria pasta. Validado com Python 3.11,
+PyRTL 1.0.3, transitions 0.9.3 e graphviz 0.21.
+
+PyRTL implementa o circuito. A `GraphMachine` da biblioteca
+[transitions](https://github.com/pytransitions/transitions) representa e desenha
+a sequência de estados; não substitui o caminho de dados. O adaptador `avancar`
+seleciona um evento por borda e dá prioridade ao reset. `start_0/start_1`
+representam start=0/1; `ir_0` a `ir_3` representam o IR capturado.
+Sem reset, os eventos `borda` completam os demais estados; start é ignorado
+fora de IDLE. JZ sempre segue para DONE: Z condiciona a escrita do PC,
+não essa transição. INVALIDO representa o código de estado 7.
+
+![Máquina de estados gerada com transitions](encontro-06/maquina_microprogramada_encontro6.png)
+
+[Diagrama vetorial SVG](encontro-06/maquina_microprogramada_encontro6.svg).
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

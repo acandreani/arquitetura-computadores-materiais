@@ -11,6 +11,8 @@
 - Também foi autorizado `encontro-06/test_encontro6_controle_pyrtl.py`,
   com os testes dos controladores.
 - Atualização local de um material não autoriza sua publicação no GitHub.
+- Autorizados em 2026-10-01: `encontro-06/exemplo1_parte2_encontro6.py` e
+  os diagramas `maquina_microprogramada_encontro6.png` e `.svg` nessa pasta.
 - Não inclua guias docentes, outros gabaritos ou materiais de outros encontros
   sem uma solicitação explícita que os coloque no escopo.
 - Antes de cada commit, confira os caminhos e o diff dos arquivos preparados.

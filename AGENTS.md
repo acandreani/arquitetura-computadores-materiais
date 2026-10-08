@@ -19,3 +19,5 @@
   sem uma solicitação explícita que os coloque no escopo.
 - Antes de cada commit, confira os caminhos e o diff dos arquivos preparados.
 - Amplie a lista do .gitignore somente para os materiais autorizados.
+- Também autorizada: solução do exercício 2 da Lista 1 do Encontro 7,
+  em `encontro-07/lista-01/solucao_encontro7_lista1_exercicio2.py`.

@@ -111,6 +111,22 @@ Os estados do desenho incluem a microinstrução e as ações do caminho de dado
 
 [Diagrama vetorial SVG](encontro-06/maquina_jz_exemplo2_encontro6.svg).
 
+## Encontro 7, Lista 1: exercício 2
+
+[Solução em Python/PyRTL](encontro-07/lista-01/solucao_encontro7_lista1_exercicio2.py).
+Gera as 16 combinações de destino/base para LOAD com imediato 12,
+confere todas as saídas do decodificador com asserts e imprime os resultados.
+O arquivo inclui a base necessária e pode ser executado sozinho:
+
+```bash
+python -m pip install pyrtl==1.0.3
+python encontro-07/lista-01/solucao_encontro7_lista1_exercicio2.py
+```
+
+`LOAD R1,[R2+12]` resulta em `0x360C` (13836). Trocar o índice seleciona
+outro registrador, não altera diretamente seu conteúdo. Este circuito
+somente decodifica: não lê RAM nem escreve registradores.
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

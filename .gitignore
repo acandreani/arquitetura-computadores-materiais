@@ -30,3 +30,8 @@
 !/encontro-07/encontro7_isa_pyrtl.py
 !/encontro-07/test_encontro7_isa_pyrtl.py
 !/encontro-07/requirements_encontro7.txt
+!/encontro-08/
+/encontro-08/*
+!/encontro-08/encontro8_baixo_nivel.py
+!/encontro-08/test_encontro8_baixo_nivel.py
+!/encontro-08/requirements_encontro8.txt

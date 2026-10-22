@@ -25,3 +25,6 @@
   `encontro-07/test_encontro7_isa_pyrtl.py` e
   `encontro-07/requirements_encontro7.txt`, necessários ao laboratório da
   parte 2 do Encontro 7, com instruções de execução no README.
+- Autorizados em 2026-10-22: `encontro-08/encontro8_baixo_nivel.py`,
+  `encontro-08/test_encontro8_baixo_nivel.py` e
+  `encontro-08/requirements_encontro8.txt`, com instruções no README.

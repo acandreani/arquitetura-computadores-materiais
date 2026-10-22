@@ -164,6 +164,43 @@ Validação: 23 testes aprovados, incluindo todas as 65.536 palavras do
 decodificador, casos de endereçamento, carga, preservação, habilitação,
 reset, desalinhamento e retorno modular de endereço.
 
+## Encontro 8: chamadas, pilha e soma de vetores
+
+- [Exemplos em Python e circuito PyRTL](encontro-08/encontro8_baixo_nivel.py)
+- [Testes automatizados](encontro-08/test_encontro8_baixo_nivel.py)
+- [Dependências](encontro-08/requirements_encontro8.txt)
+
+Com Python 3.11, crie e ative um ambiente virtual e execute na raiz:
+
+```bash
+python -m pip install -r encontro-08/requirements_encontro8.txt
+python encontro-08/encontro8_baixo_nivel.py
+python -m pytest -q encontro-08/test_encontro8_baixo_nivel.py
+```
+
+Mantenha os três arquivos na mesma pasta. Se baixá-los separadamente, execute
+os comandos nessa pasta sem o prefixo `encontro-08/`.
+
+Na parte 1, o interpretador de assembly simbólico demonstra funções folha
+e não folha, CALL/RET, preservação de RA e PUSH/POP. Os exemplos retornam
+12 e 13 em R0, preservam R2=99 e restauram SP=1000.
+
+Na parte 2, compara-se o laço em assembly com um somador especializado em
+PyRTL. O vetor [3, 5, 7, 9], nos endereços 200, 204, 208 e 212, soma 24.
+O trace mostra acumulador, índice, endereço e estados IDLE/RUN/DONE/ERROR.
+O circuito PyRTL não executa assembly: é uma máquina de estados específica
+para a soma, com pausa, reset e validação de faixa/alinhamento.
+
+O assembly é simbólico, não o código binário do encontro 7 nem a VM MVD-32.
+R0 é comum, registradores têm 32 bits e PC/RA são índices de instruções.
+LOAD/PUSH/POP operam sobre quatro bytes little-endian alinhados.
+CALL usa RA separado; chamadas aninhadas exigem preservá-lo explicitamente.
+O interpretador rejeita bytes não inicializados; o wrapper da simulação
+inicializa o vetor. Aritmética de dados conserva os 32 bits inferiores.
+
+Validação: 36 testes aprovados, cobrindo chamadas, pilha, rótulos, memória,
+equivalência dos resultados, overflow, limites, pausa, reset e erros.
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

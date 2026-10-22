@@ -127,6 +127,43 @@ python encontro-07/lista-01/solucao_encontro7_lista1_exercicio2.py
 outro registrador, não altera diretamente seu conteúdo. Este circuito
 somente decodifica: não lê RAM nem escreve registradores.
 
+## Encontro 7, parte 2: endereçamento e acesso à memória
+
+Arquivos necessários para reproduzir os exemplos e realizar o laboratório:
+
+- [Circuitos e exemplos Python/PyRTL](encontro-07/encontro7_isa_pyrtl.py)
+- [Testes do contrato e dos exemplos](encontro-07/test_encontro7_isa_pyrtl.py)
+- [Dependências com versões verificadas](encontro-07/requirements_encontro7.txt)
+
+Mantenha os três arquivos na mesma pasta. O módulo também contém o
+decodificador compartilhado com a parte 1; ele é usado pelo recorte de carga.
+
+Com Python 3.11, crie e ative um ambiente virtual. Na raiz deste repositório:
+
+```bash
+python -m pip install -r encontro-07/requirements_encontro7.txt
+python encontro-07/encontro7_isa_pyrtl.py
+python -m pytest -q encontro-07/test_encontro7_isa_pyrtl.py
+```
+
+Se baixar apenas os três arquivos, abra o terminal na pasta deles e retire
+o prefixo `encontro-07/` desses comandos.
+
+O programa demonstra LOAD com deslocamentos 12 e -4 e o endereço indexado
+`400 + 7 * 4 = 428`. No exemplo de carga, EA=1012, o dado é 37 e R1 passa
+a 37 na observação do segundo ciclo. O endereçador calcula endereços, mas
+não lê RAM; o recorte de LOAD lê dois bytes little-endian e escreve 16 bits.
+Não confunda o tamanho de um elemento de vetor com a largura desse LOAD.
+
+Os endereços são modulares de 16 bits. LOAD exige alinhamento de dois bytes;
+bytes de memória omitidos valem zero neste simulador. Os construtores
+reinicializam o bloco PyRTL: crie uma nova simulação após cada construção.
+O modelo é didático, não uma CPU completa, RISC-V ou MVD-32.
+
+Validação: 23 testes aprovados, incluindo todas as 65.536 palavras do
+decodificador, casos de endereçamento, carga, preservação, habilitação,
+reset, desalinhamento e retorno modular de endereço.
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

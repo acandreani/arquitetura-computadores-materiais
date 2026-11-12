@@ -201,6 +201,39 @@ inicializa o vetor. Aritmética de dados conserva os 32 bits inferiores.
 Validação: 36 testes aprovados, cobrindo chamadas, pilha, rótulos, memória,
 equivalência dos resultados, overflow, limites, pausa, reset e erros.
 
+## Encontro 9: RISC, CISC e famílias de ISA
+
+- [Código Python/PyRTL](encontro-09/encontro9_isa_desempenho.py)
+- [Testes automatizados](encontro-09/test_encontro9_isa_desempenho.py)
+- [Dependências](encontro-09/requirements_encontro9.txt)
+
+Com Python 3.11, crie e ative um ambiente virtual. Na raiz do repositório:
+
+```bash
+python -m pip install -r encontro-09/requirements_encontro9.txt
+python encontro-09/encontro9_isa_desempenho.py
+python -m pytest -q encontro-09/test_encontro9_isa_desempenho.py
+```
+
+Mantenha os três arquivos na mesma pasta. Se baixar somente esses arquivos,
+execute na pasta deles retirando o prefixo `encontro-09/`.
+
+O módulo calcula tempo, energia e CPI ponderado com dados hipotéticos.
+O exemplo compara 0,75 ms/7,5 mJ com 0,63 ms/5,04 mJ; a mistura de
+600 operações a CPI 1, 300 a CPI 3 e 100 a CPI 2 resulta em CPI 1,7.
+
+O laboratório PyRTL implementa um decoder combinacional didático de 16 bits
+para ADD, LOAD e ADDM, com extensão de sinal e rejeição de campos inválidos.
+ADDM com rd=1, rs=2 e offset=-4 é codificada como 0x36FC.
+O formato não é o do encontro 7 nem ARM, x86, MIPS ou MVD-32.
+Não há execução de memória/ULA, banco de registradores ou CPU completa.
+A função `expandir` lista ações conceituais, não clocks nem micro-operações
+de processadores comerciais. O simulador não mede GHz, CPI ou energia reais.
+
+Validação: 26 testes aprovados, incluindo comparação exaustiva das 65.536
+palavras do decoder, codificação, limites de operandos e entradas inválidas.
+Os arquivos apoiam os exemplos e atividades; não são o gabarito das extensões.
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

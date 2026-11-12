@@ -28,3 +28,6 @@
 - Autorizados em 2026-10-22: `encontro-08/encontro8_baixo_nivel.py`,
   `encontro-08/test_encontro8_baixo_nivel.py` e
   `encontro-08/requirements_encontro8.txt`, com instruções no README.
+- Autorizados em 2026-11-12: `encontro-09/encontro9_isa_desempenho.py`,
+  `encontro-09/test_encontro9_isa_desempenho.py` e
+  `encontro-09/requirements_encontro9.txt`, com instruções no README.

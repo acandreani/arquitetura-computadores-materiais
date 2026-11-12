@@ -234,6 +234,35 @@ Validação: 26 testes aprovados, incluindo comparação exaustiva das 65.536
 palavras do decoder, codificação, limites de operandos e entradas inválidas.
 Os arquivos apoiam os exemplos e atividades; não são o gabarito das extensões.
 
+## Encontro 10 — medição e melhoria de desempenho
+
+- [Código Python/PyRTL](encontro-10/encontro10_desempenho.py): resumo de medições, lei de Amdahl, medição em lotes e monitor de contadores.
+- [Testes](encontro-10/test_encontro10_desempenho.py).
+- [Dependências](encontro-10/requirements_encontro10.txt).
+
+Com Python 3.11, a partir da raiz do repositório:
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r encontro-10/requirements_encontro10.txt
+python encontro-10/encontro10_desempenho.py
+python -m pytest -q encontro-10/test_encontro10_desempenho.py
+```
+
+Mantenha o código e o teste na mesma pasta. Os 28 testes verificam as
+fórmulas, as entradas inválidas e o monitor, incluindo reset, pausa,
+estouro modular e comparação com um modelo de referência.
+
+A medição em lotes retorna nanossegundos por chamada e inclui o custo das
+chamadas Python e do controle do laço; os valores variam entre execuções.
+O monitor PyRTL é um circuito didático de contadores, não um processador
+nem uma medição de frequência física. Conta ciclos habilitados, conclusões
+e esperas; uma conclusão e uma espera podem ocorrer no mesmo ciclo.
+O reset é síncrono e tem prioridade. A função de simulação acrescenta uma
+observação final desabilitada para mostrar a última atualização dos registradores.
+Na lei de Amdahl, o overhead é uma fração do tempo de referência da chamada.
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo

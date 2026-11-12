@@ -31,3 +31,12 @@
 - Autorizados em 2026-11-12: `encontro-09/encontro9_isa_desempenho.py`,
   `encontro-09/test_encontro9_isa_desempenho.py` e
   `encontro-09/requirements_encontro9.txt`, com instruções no README.
+
+## Autorização — Encontro 10 (2026-11-12)
+
+O professor autorizou publicar somente os seguintes códigos do Encontro 10,
+com instruções de execução no README:
+
+- `encontro-10/encontro10_desempenho.py`
+- `encontro-10/test_encontro10_desempenho.py`
+- `encontro-10/requirements_encontro10.txt`

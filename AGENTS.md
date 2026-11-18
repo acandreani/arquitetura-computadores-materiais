@@ -40,3 +40,10 @@ com instruções de execução no README:
 - `encontro-10/encontro10_desempenho.py`
 - `encontro-10/test_encontro10_desempenho.py`
 - `encontro-10/requirements_encontro10.txt`
+
+## Autorização do Encontro 11
+
+O professor autorizou os dois exemplos do caderno do aluno.
+
+- `encontro-11/renovacao_dram.py`
+- `encontro-11/largura_de_banda.py`

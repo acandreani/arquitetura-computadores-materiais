@@ -263,6 +263,17 @@ O reset é síncrono e tem prioridade. A função de simulação acrescenta uma
 observação final desabilitada para mostrar a última atualização dos registradores.
 Na lei de Amdahl, o overhead é uma fração do tempo de referência da chamada.
 
+## Encontro 11 — Tecnologias de memória
+
+Execute os exemplos com Python 3 a partir da raiz do repositório.
+
+```bash
+python3 encontro-11/renovacao_dram.py
+python3 encontro-11/largura_de_banda.py
+```
+
+O primeiro script imprime `7.8125`, o intervalo médio em microssegundos para renovar 8192 linhas em 64 ms no modelo do caderno. O segundo imprime `38.4`, a banda teórica em GB/s de dois canais de 64 bits a 2,4 bilhões de transferências por segundo cada.
+
 ## Seleção dos materiais
 
 Este repositório recebe apenas materiais explicitamente escolhidos pelo
